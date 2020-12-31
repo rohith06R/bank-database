@@ -1,0 +1,7 @@
+<?php
+require('db.php');
+$loan_no= $_REQUEST['loan_no'];
+$query = "DELETE FROM loan WHERE loan_no=$loan_no"; 
+$result = mysqli_query($con,$query) or die ( mysqli_error());
+header("Location: viewloan.php"); 
+?>
